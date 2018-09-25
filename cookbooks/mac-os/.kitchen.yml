@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+  # You may wish to disable always updating cookbooks in CI or other testing environments.
+  # For example:
+  #   always_update_cookbooks: <%= !ENV['CI'] %>
+  always_update_cookbooks: true
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: high-sierra-chef14
+    driver:
+      box: jhcook/macos-sierra
+      version: 10.13.5
+    provisioner:
+      product_version: 14
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mac-os::development]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:

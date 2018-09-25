@@ -1,0 +1,1 @@
+default['directories']['dev_folder'] = ['Development', 'Devops', 'Design']
