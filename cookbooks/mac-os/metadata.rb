@@ -1,6 +1,6 @@
 name 'mac-os'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Jorge Luiz'
+maintainer_email 'george.luizchaves@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures mac-os'
 long_description 'Installs/Configures mac-os'
