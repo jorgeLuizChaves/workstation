@@ -30,16 +30,17 @@ end
 action :install do
     description "Installs the application."
 
-    execute 'name' do
-        command "curl -O #{new_resource.source}"
-        action :run
+    if !new_resource.installed
+        execute 'download' do
+            command "curl -O #{new_resource.source}"
+            action :run
+        end
+    
+        execute 'install' do
+            command "unzip -o #{new_resource.zip_file}.zip -d #{new_resource.destination}"
+            action :run
+        end
     end
-
-    execute 'install' do
-        command "unzip -o #{new_resource.zip_file}.zip -d #{new_resource.destination}"
-        action :run
-    end
-
 end
 
 action :uninstall do

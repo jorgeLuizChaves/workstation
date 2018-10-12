@@ -17,7 +17,47 @@ dmg_package 'IntelliJ' do
   action :install
 end
 
+dmg_package 'RubyMine' do
+  source 'https://download-cf.jetbrains.com/ruby/RubyMine-2018.2.3.dmg'
+  volumes_dir 'RubyMine'
+  dmg_name 'RubyMine'
+  action :install
+end
 
+dmg_package 'GoLand' do
+  volumes_dir 'GoLand'
+  dmg_name 'GoLand'
+  source 'https://download-cf.jetbrains.com/go/goland-2018.2.3.dmg'
+  action :install
+end
+
+dmg_package 'DataGrip' do
+  source 'https://download-cf.jetbrains.com/datagrip/datagrip-2018.2.4.dmg'
+  volumes_dir 'DataGrip'
+  dmg_name 'DataGrip'
+  action :install
+end
+
+dmg_package 'WebStorm' do
+  source 'https://download-cf.jetbrains.com/webstorm/WebStorm-2018.2.4.dmg'
+  dmg_name 'WebStorm'
+  volumes_dir 'WebStorm'
+  action :install
+end
+
+dmg_package 'PyCharm' do
+  source 'https://download-cf.jetbrains.com/python/pycharm-professional-2018.2.4.dmg'
+  volumes_dir 'PyCharm'
+  dmg_name 'PyCharm'
+  action :install
+end
+
+dmg_package 'AppCode' do
+  volumes_dir 'AppCode'
+  dmg_name 'AppCode'
+  source 'https://download-cf.jetbrains.com/objc/AppCode-2018.2.3.dmg'
+  action :install
+end
 
 zip_app 'Iterm2' do
   source 'https://iterm2.com/downloads/stable/iTerm2-3_2_0.zip'
@@ -39,4 +79,3 @@ zip_app 'Visual Studio Code' do
   app 'Visual Studio Code'
   action :install
 end
-# # 

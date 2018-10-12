@@ -8,7 +8,7 @@ dmg_package 'Evernote' do
     source 'https://cdn1.evernote.com/mac-smd/public/Evernote_RELEASE_7.5_457109.dmg'
     accept_eula true
 end
-  
+
 dmg_package 'Dropbox' do
     dmg_name 'dropbox'
     source 'https://dl-web.dropbox.com/installer?build_no=57.4.89&plat=mac&tag=DBPREAUTH%3A%3Achrome%3A%3AeJyrVkosLcmIL8nPTs1TslJQynVxC3XOiAp3c_LOTg2sdMnwzQpI9SgwKQ0rNAiITDXQMzQ1Njc3MzAxMlLSUVAqTi0uzszPi89MAWo2MjG3BEoYGBoYmxlaGFmYmBpZGFgaW5gbWVgYmJqbWBoamRqaGNcCABDoIA8~%40META&tag_token=ALUro8UgZy1AQ9gsoCNE7r75wqjYEz762wdI7u9prhA8iw'
